@@ -95,7 +95,7 @@ def makeMask(hsv_frame, color_Range):
 # range are filtered out and the centroid of the largest of these is drawn and returned 
 def drawCentroid(vid, color_area, mask, showCentroid):
 	
-	contour, _ = cv2.findContours( mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+	_,contour,hier = cv2.findContours( mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
 	l=len(contour)
 	area = np.zeros(l)
