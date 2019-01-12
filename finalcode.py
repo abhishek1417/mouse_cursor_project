@@ -165,7 +165,6 @@ def calibrateColor(color, def_range):
 		elif k == ord('d'):
 			cv2.destroyWindow(name)
 			return def_range
-
 '''
 This function takes as input the center of yellow region (yc) and 
 the previous cursor position (pyp). The new cursor position is calculated 
@@ -292,8 +291,6 @@ def performAction( yp, rc, bc, action, drag, perform):
 
 			pyautogui.mouseUp()
 				
-		
-
 cap = cv2.VideoCapture(0)
 
 print ('**********************************************************************')
@@ -320,7 +317,6 @@ while(1):
 
 	k = cv2.waitKey(10) & 0xFF
 	changeStatus(k)
-
 
 	_, frameinv = cap.read()
 	# flip horizontaly to get mirror image in camera
@@ -349,12 +345,6 @@ while(1):
 
 	if k == 27:
 		break
-
-cv2.destroyAllWindows()
-	
 		
-
-
-
-
-
+cv2.destroyAllWindows()
+		
